@@ -16,7 +16,7 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...
-      - sudo service docker start
+      - sudo systemctl start docker
       - docker build -t $REPOSITORY_URI:$IMAGE_TAG .
   post_build:
     commands:
